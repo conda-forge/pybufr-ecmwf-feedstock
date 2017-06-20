@@ -14,22 +14,34 @@ BUFR stands for Binary Universal Form for the Representation of
 meteorological data.
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pybufr-ecmwf-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pybufr-ecmwf-feedstock)
+OSX: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pybufr-ecmwf/badges/version.svg)](https://anaconda.org/conda-forge/pybufr-ecmwf)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pybufr-ecmwf/badges/downloads.svg)](https://anaconda.org/conda-forge/pybufr-ecmwf)
+
 Installing pybufr-ecmwf
 =======================
 
-Installing pybufr-ecmwf from the conda-forge channel can be achieved by adding conda-forge to your channels with:
+Installing `pybufr-ecmwf` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 ```
 
-Once the conda-forge channel has been enabled, pybufr-ecmwf can be installed with:
+Once the `conda-forge` channel has been enabled, `pybufr-ecmwf` can be installed with:
 
 ```
 conda install pybufr-ecmwf
 ```
 
-It is possible to list all of the versions of pybufr-ecmwf available on your platform with:
+It is possible to list all of the versions of `pybufr-ecmwf` available on your platform with:
 
 ```
 conda search pybufr-ecmwf --channel conda-forge
@@ -54,8 +66,8 @@ packages to the [conda-forge](https://anaconda.org/conda-forge)
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](http://github.com/conda-forge/conda-smithy) has been developed.
-Using the ``conda-forge.yml`` within this repository, it is possible to regenerate all of
-this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy regenerate``.
+Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
+this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
 
 Terminology
@@ -69,18 +81,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pybufr-ecmwf-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pybufr-ecmwf-feedstock)
-OSX: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pybufr-ecmwf/badges/version.svg)](https://anaconda.org/conda-forge/pybufr-ecmwf)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pybufr-ecmwf/badges/downloads.svg)](https://anaconda.org/conda-forge/pybufr-ecmwf)
 
 
 Updating pybufr-ecmwf-feedstock
