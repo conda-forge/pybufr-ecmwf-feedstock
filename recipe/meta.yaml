@@ -34,7 +34,7 @@ test:
 
 about:
   home: https://github.com/jdkloe/pybufr-ecmwf
-  license: GNU Lesser General Public License v3 (LGPLv3)
+  license: LGPL-3.0
   summary: 'Python interface around the ECMWF-BUFR library.'
   description: |
     A Python module that allows reading and writing BUFR formatted files, where
