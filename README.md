@@ -3,7 +3,7 @@ About pybufr-ecmwf
 
 Home: https://github.com/jdkloe/pybufr-ecmwf
 
-Package license: GNU Lesser General Public License v3 (LGPLv3)
+Package license: LGPL-3.0
 
 Feedstock license: BSD 3-Clause
 
