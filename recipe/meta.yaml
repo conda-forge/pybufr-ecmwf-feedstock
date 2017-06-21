@@ -11,26 +11,26 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: True  # [win]
-  skip: True  # [osx]
+  number: 1
+  skip: True  # [win or osx]
 
 requirements:
   build:
     - python
     - numpy x.x
     - gcc
-
   run:
     - python
     - numpy x.x
-    - libgfortran
+    - libgcc  # [linux]
+    - libgfortran  # [osx]
 
 test:
   imports:
     - pybufr_ecmwf
   commands:
-    # - conda inspect linkages -n _test pybufr-ecmwf  # [not win]
+    - conda inspect linkages -p $PREFIX pybufr-ecmwf  # [not win]
+    - conda inspect objects -p $PREFIX pybufr-ecmwf  # [osx]
 
 about:
   home: https://github.com/jdkloe/pybufr-ecmwf
