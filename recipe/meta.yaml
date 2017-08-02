@@ -17,11 +17,11 @@ build:
 requirements:
   build:
     - python
-    - numpy x.x
+    - numpy 1.8.*
     - gcc
   run:
     - python
-    - numpy x.x
+    - numpy >=1.8
     - libgcc  # [linux]
     - libgfortran  # [osx]
 
