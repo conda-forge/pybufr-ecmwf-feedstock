@@ -1,14 +1,12 @@
 {% set version = "0.82" %}
-{% set sha256 = "3f8375f2ced161a203c3521520fdeb8b8b5b088987c98b609abdff7408b78a4c" %}
 
 package:
   name: pybufr-ecmwf
   version: {{ version }}
 
 source:
-  fn: pybufr-ecmwf-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/p/pybufr-ecmwf/pybufr-ecmwf-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 3f8375f2ced161a203c3521520fdeb8b8b5b088987c98b609abdff7408b78a4c
 
 build:
   number: 1001
@@ -20,21 +18,16 @@ build:
 
 requirements:
   build:
+    - {{ compiler('fortran') }}
+    - {{ compiler('c') }}
     - python
-    - numpy 1.8.*
-    - gcc
   run:
     - python
-    - numpy >=1.8
-    - libgcc  # [linux]
-    - libgfortran  # [osx]
+    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
     - pybufr_ecmwf
-  commands:
-    - conda inspect linkages -p $PREFIX pybufr-ecmwf  # [not win]
-    - conda inspect objects -p $PREFIX pybufr-ecmwf  # [osx]
 
 about:
   home: https://github.com/jdkloe/pybufr-ecmwf
