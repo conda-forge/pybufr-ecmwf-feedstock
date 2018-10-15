@@ -10,17 +10,20 @@ source:
 
 build:
   number: 1001
+  skip: True  # [win]
   script:
     - export DYLD_FALLBACK_LIBRARY_PATH=$PREFIX/lib  # [osx]
     - export LDFLAGS="-undefined dynamic_lookup -bundle"  # [osx]
-    - python setup.py install
-  skip: True  # [win]
+    - "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv"
 
 requirements:
   build:
     - {{ compiler('fortran') }}
     - {{ compiler('c') }}
+  host:
     - python
+    - pip
+    - numpy
   run:
     - python
     - {{ pin_compatible('numpy') }}
