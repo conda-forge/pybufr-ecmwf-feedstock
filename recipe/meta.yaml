@@ -15,7 +15,6 @@ build:
     - export DYLD_FALLBACK_LIBRARY_PATH=$PREFIX/lib  # [osx]
     - export LDFLAGS="-undefined dynamic_lookup -bundle"  # [osx]
     
-    --fortran-compiler and --c-compiler
     - {{ PYTHON }} -m pip install . --no-deps --ignore-installed --install-option --fortran-compiler="$FC" --install-option --c-compiler="$CC" -vv
 
 requirements:
