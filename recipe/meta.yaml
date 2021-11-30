@@ -23,6 +23,7 @@ requirements:
     - python
     - numpy
     - {{ compiler('c') }}
+    - {{ compiler('fortran') }}
   host:
     - python
     - numpy
