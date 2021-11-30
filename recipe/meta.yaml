@@ -23,6 +23,10 @@ requirements:
     - python
     - numpy
     - gcc
+  host:
+    - python
+    - numpy
+    - pip
   run:
     - python
     - {{ pin_compatible('numpy') }}
