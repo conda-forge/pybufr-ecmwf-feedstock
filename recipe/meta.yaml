@@ -15,14 +15,14 @@ build:
   script:
     - export DYLD_FALLBACK_LIBRARY_PATH=$PREFIX/lib  # [osx]
     - export LDFLAGS="-undefined dynamic_lookup -bundle"  # [osx]
-    - python -m pip install .
+    - "{{ PYTHON }} -m pip install . -vv"
   skip: True  # [win]
 
 requirements:
   build:
     - python
     - numpy
-    - gcc
+    - {{ compiler('c') }}
   host:
     - python
     - numpy
