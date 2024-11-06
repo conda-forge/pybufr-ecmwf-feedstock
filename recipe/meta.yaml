@@ -19,7 +19,7 @@ build:
   skip: True  # [win]
 
 requirements:
-  build:
+  host:
     - python
     - numpy 1.8.*
     - gcc
@@ -33,12 +33,11 @@ test:
   imports:
     - pybufr_ecmwf
   commands:
-    - conda inspect linkages -p $PREFIX pybufr-ecmwf  # [not win]
-    - conda inspect objects -p $PREFIX pybufr-ecmwf  # [osx]
 
 about:
   home: https://github.com/jdkloe/pybufr-ecmwf
   license: LGPL-3.0
+  license_file: COPYING.txt
   summary: 'Python interface around the ECMWF-BUFR library.'
   description: |
     A Python module that allows reading and writing BUFR formatted files, where
